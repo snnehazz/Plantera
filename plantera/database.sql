@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS plantera;
+USE plantera;
+
+CREATE TABLE IF NOT EXISTS plants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    species VARCHAR(150) DEFAULT NULL,
+    photo VARCHAR(255) DEFAULT NULL,
+    watering_interval INT NOT NULL DEFAULT 7,
+    last_watered DATE DEFAULT NULL,
+    next_watering DATE DEFAULT NULL,
+    notes TEXT DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
